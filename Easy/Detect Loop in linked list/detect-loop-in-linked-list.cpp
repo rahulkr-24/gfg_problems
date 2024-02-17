@@ -46,17 +46,16 @@ class Solution
 {
     public:
     //Function to check if the linked list has a loop.
-    bool detectLoop(Node* h)
+    bool detectLoop(Node* head)
     {
         // your code here
-       unordered_set<Node*>s;
-        while(h !=NULL)
+        Node*slowPtr=head;
+        Node* fastPtr=head;
+        while(fastPtr && fastPtr->next)
         {
-            if(s.find(h) !=s.end())
-            return true;
-            s.insert(h);
-            h=h->next;
-            
+            fastPtr=fastPtr->next->next;
+            slowPtr=slowPtr->next;
+            if(fastPtr==slowPtr)return true;
         }
         return false;
     }
