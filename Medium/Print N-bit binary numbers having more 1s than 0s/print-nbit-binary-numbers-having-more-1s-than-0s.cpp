@@ -7,24 +7,28 @@ using namespace std;
 //User function template for C++
 class Solution{
 public:	
-     void getAns(vector<string> &ans,int ct1,int ct0,string s,int n){
-        if(s.size()==n){
-            ans.push_back(s);
-            return;
+    void buildString(vector<string>&s,int cnt1, int cnt0,int n,string temp)
+    {
+        // cout<<temp;
+        if(temp.size()==n){
+        s.push_back(temp);
+        return;    
         }
-        if(ct1>ct0){
-            getAns(ans,ct1,ct0+1,s+'0',n);
+        if(cnt1 >cnt0)
+        {
+            buildString(s,cnt1,cnt0+1,n,temp+'0');
         }
-        getAns(ans,ct1+1,ct0,s+'1',n);
+        buildString(s,cnt1+1,cnt0,n,temp+'1');
     }
 	vector<string> NBitBinary(int n)
 	{
 	    // Your code goes here
-	      vector<string> ans;
-    getAns(ans,0,0,"",n);
-    sort(ans.rbegin(),ans.rend());
-    return ans;
+	    vector<string>s;
+	   string temp="";
+	    buildString(s,0,0,n,temp);
+	    sort(s.rbegin(),s.rend());
 	    
+	    return s;
 	}
 };
 
