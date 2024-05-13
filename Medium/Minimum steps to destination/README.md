@@ -8,5 +8,5 @@
 <strong>Output:</strong> 4
 <strong>Explaination:</strong> The steps are +1, +2, +3 and +4.</span></pre>
 <p><span style="font-size: 18px;"><strong>Your Task:</strong><br>You do not need to read input or print anything. Your task is to complete the function <strong>minSteps()</strong> which takes the value d as input parameter and returns the minimum number of steps required to reach the destination d from 0.</span></p>
-<p><span style="font-size: 18px;"><strong>Expected Time Complexity:</strong> O(d)<br><strong>Expected Auxiliary Space:</strong> O(1)</span></p>
+<p><span style="font-size: 18px;"><strong>Expected Time Complexity:</strong> O(sqrt(d))<br><strong>Expected Auxiliary Space:</strong> O(1)</span></p>
 <p><span style="font-size: 18px;"><strong>Constraints:</strong><br>1 ≤ d ≤ 10000</span></p></div><p><span style=font-size:18px><strong>Company Tags : </strong><br><code>Flipkart</code>&nbsp;<code>Amazon</code>&nbsp;<code>InMobi</code>&nbsp;<br><p><span style=font-size:18px><strong>Topic Tags : </strong><br><code>Dynamic Programming</code>&nbsp;<code>Recursion</code>&nbsp;<code>Algorithms</code>&nbsp;
